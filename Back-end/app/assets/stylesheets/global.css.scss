@@ -1,6 +1,6 @@
 $dark_gray: #2B2E2E;
 $light_gray: #C0C1C1;
-$purple: #B187D8;
+$blue: #58a0f1;
 
 @mixin bold_font {
 	font-family: "Brandon Grotesque","Helvetica Neue", Helvetica, sans-serif;
@@ -41,13 +41,17 @@ body {
 button, .button {
 	border: none;
 	outline: none;
-	background: $purple;
-	padding: 1rem 3.0rem;
+	display: inline;
+	background: $blue;
+	padding: 0.3rem 2rem;
 	border-radius: 2rem;
 	a {
 		color: white;
 		font-size: 1.4rem;
 		text-decoration: none;
+	}
+	&:hover {
+		color: $dark_gray;
 	}
 }
 
@@ -58,7 +62,7 @@ button, .button {
 }
 
 a {
-	color: $purple;
+	color: $blue;
 	text-decoration: none;
 	&:hover {
 		color: $dark_gray;
@@ -71,7 +75,7 @@ header {
 	top: 0;
 	width: 100%;
 	padding: 1.5rem;
-	border-bottom: 7px solid $purple;
+	border-bottom: 7px solid $blue;
 	.header_inner {
 		width: 90%;
 		margin: 0 auto;
@@ -89,7 +93,7 @@ header {
 				line-height: 1.5;
 				margin-left: 1rem;
 				&:hover {
-					color: $purple;
+					color: $blue;
 				}
 			}
 		}
@@ -118,10 +122,11 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
 }
 
 input[type="text"], input[type="email"], input[type="password"] {
-	height: 40px;
-	width: 320px;
+	height: 30px;
+	width: 285px;
 	display: block;
 	margin-top: 5px;
+	padding-left: 8px;
 }
 
 textarea {
