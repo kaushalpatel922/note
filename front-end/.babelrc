@@ -3,5 +3,16 @@
     "react",
     "es2015",
     "react-hmre"
-  ]
+  ],
+  "env": {
+    "development": {
+      "plugins": [["react-transform", {
+        "transforms": [{
+          "transform": "react-transform-hmr",
+          "imports": ["react"],
+          "locals": ["module"]
+        }]
+      }]]
+    }
+  }
 }
