@@ -15,7 +15,7 @@ window.NotesContainer = React.createClass({
   },
   render: function() {
     if (this.state.loading) {
-      return <div>loading...</div>
+      return <div></div>
     }
 
     // return <NotesList notes={this.state.notes} />

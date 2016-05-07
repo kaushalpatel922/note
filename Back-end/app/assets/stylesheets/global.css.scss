@@ -1,4 +1,4 @@
-$dark_gray: #2B2E2E;
+$dark_gray: #333333;
 $light_gray: #C0C1C1;
 $blue: #58a0f1;
 
@@ -14,7 +14,7 @@ $blue: #58a0f1;
 
 body {
 	// hiding signed in and sign out status - change padding to 4.5rem to see.
-	padding-top: 2.0rem;
+	padding-top: 2.8rem;
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
 }
 
@@ -100,6 +100,10 @@ header {
 	}
 }
 
+img {
+	width: 80px;
+	height: 45px;
+}
 footer {
 	background: $dark_gray;
 	width: 100%;
