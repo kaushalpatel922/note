@@ -1,18 +1,15 @@
 import React from 'react';
-// import {Link} from 'react-router';
+import {Link} from 'react-router';
 
 const App = React.createClass({
-  getInitialState: function() {
-
-  },
-
-  componentDidMount: function() {
-
-  },
-
   render: function() {
     return (
-      <div>Hello!</div>
+      <div>
+        <header>
+          <h1>Notes App</h1>
+        </header>
+        {this.props.children}
+      </div>
     )
   }
 });
