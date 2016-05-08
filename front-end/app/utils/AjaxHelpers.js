@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const AjaxHelpers = {
   getAllNotes: function() {
-    return axios.get('http://localhost:3000/notes');
+    return axios.get('http://localhost:3000/notes.json');
   },
 
   addNote: function(data) {
@@ -11,24 +11,14 @@ const AjaxHelpers = {
       content: data,
       dateCreated: new Date(),
     };
-    return axios.post('http://localhost:3000/notes/new', object);
+    return axios.post('http://localhost:3000/notes', data);
   },
 
-  editNote: function(newNote, oldNote) {
-    console.log("newNote", newNote)
-    console.log("oldNote", OldNote)
-    let oldNote = data.oldNote;
-    let newNote = {
-      content: data.newNote
-    };
-    return axios.put("http://localhost:3000/notes" + oldNote, newNote);
-  },
-
-  deleteNote: function(data) {
+  deleteNote: function(id) {
     console.log("data",data);
-    return axios.delete('http://localhost:3000/notes/delete' + data);
+    return axios.delete('http://localhost:3000/notes/' + id);
   }
 
-}
+};
 
-export defauly AjaxHelpers;
+export default AjaxHelpers;

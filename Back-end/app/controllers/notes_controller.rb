@@ -3,6 +3,7 @@ class NotesController < ApplicationController
 
   def index
     @notes = Note.where(user_id: current_user).reverse
+    render json: @notes
     # @notes = Note.where(user_id: current_user).order(params[:sort])
   end
 
