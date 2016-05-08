@@ -3,7 +3,7 @@ class NotesController < ApplicationController
 
   def index
     @notes = Note.where(user_id: current_user).reverse
-    # render json: @notes
+    render json: @notes
     # @notes = Note.where(user_id: current_user).order(params[:sort])
   end
 
@@ -12,17 +12,28 @@ class NotesController < ApplicationController
 
   def new
     @note = current_user.notes.build
+    render :json => @notes
   end
 
   def create
     @note = current_user.notes.build(note_params)
 
     if @note.save
-      redirect_to @note
+      render 'show', formats: [:json], handlebars: [:jbuilder], status: 201
     else
-      render 'new'
+      render 'new', json: {error: "note not created"}
     end
   end
+
+  #
+  # if @contact.save
+  #     render 'show', formats: [:json], handlebars: [:jbuilder], status: 201
+  #   else
+  #     render json: {error: "Contact could  be created"}
+  #   end
+  # end
+
+
 
   def edit
   end
