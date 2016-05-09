@@ -8,6 +8,8 @@ class NotesController < ApplicationController
   end
 
   def show
+    @notes = Note.find(params[:id])
+    render json: @note
   end
 
   def new
